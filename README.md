@@ -19,7 +19,7 @@ A production-ready boilerplate for building Discord bots in TypeScript, focused 
 The recommended way to start a new project from this template:
 
 ```bash
-npx create-discord-bot
+npx @ludoows/create-discord-bot
 ```
 
 The wizard clones the template, generates a pre-filled `.env`, and runs `npm install` automatically.

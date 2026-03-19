@@ -1,5 +1,5 @@
 {
-  "name": "create-discord-bot",
+  "name": "@ludoows/create-discord-bot",
   "version": "1.0.0",
   "description": "Scaffold a production-ready Discord bot in TypeScript",
   "type": "module",

@@ -5,7 +5,7 @@ CLI to scaffold a new project from the [discord-bot-template](https://github.com
 ## Usage
 
 ```bash
-npx create-discord-bot
+npx @ludoows/create-discord-bot
 ```
 
 No installation required.

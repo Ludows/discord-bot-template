@@ -5,7 +5,7 @@ The fastest way to start a new project from this template is to use the official
 ## Usage
 
 ```bash
-npx create-discord-bot
+npx @ludoows/create-discord-bot
 ```
 
 No prior installation is required.
@@ -29,9 +29,8 @@ Once the prompts are answered, the CLI:
 1. Clones the template from GitHub (no git history)
 2. Renames the project in `package.json`
 3. Generates a pre-filled `.env` file based on your answers
-4. Removes `src/mail/` if mail was not selected
-5. Removes `src/database/` if no database was selected
-6. Runs `npm install`
+4. Updates the default locale in `src/config.ts`
+5. Runs `npm install`
 
 ## Next steps
 
