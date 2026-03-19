@@ -21,8 +21,8 @@
     "scaffold",
     "create"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "ludoows",
+  "license": "MIT",
   "dependencies": {
     "@clack/prompts": "^0.10.1",
     "degit": "^2.8.4",
