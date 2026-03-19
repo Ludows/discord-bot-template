@@ -132,15 +132,6 @@ async function main() {
     await fs.writeFile(configPath, config);
   }
 
-  // --- Remove mail if not needed ---
-  if (!includeMail) {
-    await fs.remove(path.join(targetDir, "src", "mail"));
-  }
-
-  // --- Remove database if not needed ---
-  if (database === "none") {
-    await fs.remove(path.join(targetDir, "src", "database"));
-  }
 
   // --- Install dependencies ---
   spinner.start("Installation des dépendances…");
