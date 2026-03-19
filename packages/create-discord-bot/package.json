@@ -1,0 +1,42 @@
+{
+  "name": "create-discord-bot",
+  "version": "1.0.0",
+  "description": "Scaffold a production-ready Discord bot in TypeScript",
+  "type": "module",
+  "bin": {
+    "create-discord-bot": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "typescript",
+    "template",
+    "scaffold",
+    "create"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "^0.10.1",
+    "degit": "^2.8.4",
+    "fs-extra": "^11.3.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/degit": "^2.8.6",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
