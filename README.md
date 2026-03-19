@@ -57,6 +57,12 @@ npm run dev
 
 ---
 
+## License
+
+MIT
+
+---
+
 ## Scripts
 
 ```bash
