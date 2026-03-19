@@ -1,0 +1,55 @@
+{
+  "name": "trumpbot",
+  "version": "1.0.0",
+  "description": "Bienvenue dans la documentation du boilerplate ultime pour la création de bots Discord en TypeScript. Ce projet est conçu pour être modulaire, robuste et **prêt pour la production**.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "make": "tsx src/console/Make.ts",
+    "db:setup": "tsx src/console/commands/DbSetupCommand.ts",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "migrate": "tsx src/console/Kernel.ts migrate",
+    "command": "tsx src/console/Kernel.ts",
+    "start:prod": "pm2 start ecosystem.config.js",
+    "logs": "pm2 logs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@distube/ytsr": "^2.0.4",
+    "axios": "^1.13.6",
+    "dayjs": "^1.11.19",
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.3.1",
+    "mysql2": "^3.18.2",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^8.0.1",
+    "pg": "^8.19.0",
+    "pg-hstore": "^2.3.4",
+    "rss-parser": "^3.13.0",
+    "scnf-node": "https://github.com/4N1S/sncf-node/archive/refs/heads/master.tar.gz",
+    "sequelize": "^6.37.7",
+    "umzug": "^3.8.2",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.2",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^7.0.11",
+    "@types/sequelize": "^4.28.20",
+    "@types/wpapi": "^1.1.4",
+    "@vitest/coverage-v8": "^4.0.18",
+    "axios-mock-adapter": "^2.1.0",
+    "pm2": "^6.0.14",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18",
+    "wpapi": "^1.2.2"
+  }
+}

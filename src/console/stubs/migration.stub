@@ -1,0 +1,13 @@
+import { QueryInterface, Sequelize } from 'sequelize';
+
+export default {
+  async up(queryInterface: QueryInterface, Sequelize: any): Promise<void> {
+    await queryInterface.createTable('{{table}}', {
+{{upCols}}
+    });
+  },
+
+  async down(queryInterface: QueryInterface, Sequelize: any): Promise<void> {
+    await queryInterface.dropTable('{{table}}');
+  }
+};

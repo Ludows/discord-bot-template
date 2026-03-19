@@ -1,0 +1,13 @@
+import { Message } from 'discord.js';
+import { Interaction, ParsedInput } from './Interaction';
+
+export class {{Name}}Interaction extends Interaction {
+  protected signature = '{{name}}';
+  public description = 'Commande {{Name}} auto-générée';
+
+  public async execute(message: Message | null, input: ParsedInput): Promise<void> {
+    if (message) {
+        await message.reply(`Commande {{name}} exécutée !`);
+    }
+  }
+}

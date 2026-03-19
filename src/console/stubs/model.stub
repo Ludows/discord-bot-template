@@ -1,0 +1,28 @@
+import { DataTypes, Model } from "sequelize";
+import { sequelize } from "../index";
+
+export class {{Name}} extends Model {
+  declare id: number;
+{{fieldsDecl}}
+  declare createdAt: Date;
+  declare updatedAt: Date;
+
+  static boot() {
+    if (sequelize && !this.sequelize) {
+      this.init(
+        {
+          id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+          },
+{{fieldsCols}}
+        },
+        {
+          sequelize,
+          tableName: "{{table}}",
+        },
+      );
+    }
+  }
+}

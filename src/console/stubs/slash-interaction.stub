@@ -1,0 +1,23 @@
+import { ChatInputCommandInteraction, Message } from 'discord.js';
+import { SlashInteraction } from './SlashInteraction';
+import { ParsedInput } from './Interaction';
+
+export class {{Name}}Interaction extends SlashInteraction {
+  protected signature = '{{name}}';
+  public description = 'Commande {{Name}} auto-générée';
+
+  constructor() {
+    super();
+    // Ex: this.registerButton('{{name}}:confirm', this.onConfirm);
+  }
+
+  public async executeSlash(interaction: ChatInputCommandInteraction, input: ParsedInput): Promise<void> {
+    await interaction.reply({ content: `Commande {{name}} exécutée via Slash !`, ephemeral: true });
+  }
+
+  public async execute(message: Message | null, input: ParsedInput): Promise<void> {
+    if (message) {
+        await message.reply(`Commande {{name}} exécutée via Prefix !`);
+    }
+  }
+}

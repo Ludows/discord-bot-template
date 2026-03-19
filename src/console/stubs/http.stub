@@ -1,0 +1,12 @@
+import { HttpClient } from '../HttpClient';
+
+export class {{Name}}Api extends HttpClient {
+  constructor() {
+    super('https://api.example.com/v1');
+  }
+
+  // Exemple:
+  // public async getResource() {
+  //   return this.get('/resource');
+  // }
+}

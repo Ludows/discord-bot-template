@@ -1,0 +1,27 @@
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { {{Name}}Service } from '../../src/services/{{Name}}Service';
+import { sequelize } from '../../src/database';
+
+vi.mock('../../src/database', () => ({
+  sequelize: {
+    transaction: vi.fn().mockResolvedValue({
+      commit: vi.fn(),
+      rollback: vi.fn(),
+    })
+  }
+}));
+
+describe('{{Name}}Service', () => {
+  let service: {{Name}}Service;
+
+  beforeEach(() => {
+    service = new {{Name}}Service();
+    vi.clearAllMocks();
+  });
+
+  it('boot() execute sans erreur', async () => {
+    await expect(service.boot()).resolves.not.toThrow();
+  });
+
+  // TODO: Ajoutez ici les tests pour les méthodes métier de {{Name}}Service
+});

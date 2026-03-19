@@ -1,0 +1,17 @@
+import { Service } from './Service';
+
+export class {{Name}}Service extends Service {
+  protected name = '{{Name}}';
+
+  public async boot(): Promise<void> {
+    // Initialisation du service au démarrage
+    this.log('Service démarré');
+  }
+
+  // Exemple:
+  // public async performAction() {
+  //   return this.transaction(async () => {
+  //       // Logique métier avec accès DB
+  //   });
+  // }
+}

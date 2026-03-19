@@ -1,0 +1,18 @@
+import { ConsoleCommand } from '../ConsoleCommand';
+
+export class {{Name}}Command extends ConsoleCommand {
+  public signature = '{{name}}';
+  public description = 'Description de la commande {{Name}}';
+
+  public async handle(): Promise<void> {
+    this.info('Exécution de la commande {{Name}}...');
+    
+    // Votre logique ici
+    
+    this.success('Commande {{Name}} terminée avec succès.');
+  }
+}
+
+if (require.main === module) {
+  new {{Name}}Command().run();
+}

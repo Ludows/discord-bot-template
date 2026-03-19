@@ -1,0 +1,27 @@
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { {{Name}}Api } from '../../src/http/endpoints/{{Name}}Api';
+import MockAdapter from 'axios-mock-adapter';
+
+describe('{{Name}}Api', () => {
+  let api: {{Name}}Api;
+  let mock: MockAdapter;
+
+  beforeEach(() => {
+    api = new {{Name}}Api();
+    mock = new MockAdapter((api as any).client);
+    vi.clearAllMocks();
+  });
+
+  it('gère une réponse texte nominale (GET)', async () => {
+    mock.onGet('/test').reply(200, { success: true });
+    const res = await api.get('/test');
+    expect(res).toEqual({ success: true });
+  });
+
+  it('gère une erreur HTTP 500 proprement', async () => {
+    mock.onGet('/error').reply(500);
+    await expect(api.get('/error')).rejects.toThrow();
+  });
+
+  // TODO: Ajoutez ici les tests spécifiques à vos endpoints
+});
